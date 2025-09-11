@@ -1,0 +1,5 @@
+Crie uma função preenchida que receba um array bidimensional arrde inteiros com uma dimensão fixa ( LxC), e preencha o array com l*cnúmeros lidos do teclado, ex:
+void preenche (int arr[L][C], int l, int c);
+Crie uma função mediaque recebe um array bidimensional arr, a quantidade de linhas l, a quantidade de colunas c, e retorna a média entre todos os valores do array, ex:
+float media (int arr[L][C], int l, int c);
+Le Cdevem ser quaisquer valores constantes predefinidos.
