@@ -1,8 +1,37 @@
+/* 
 Crie um vetor de tamanho máximo fixo na função principal, ex:
 int vec[100];
-Crie uma função preenchida que receba um vetor xsde inteiros, uma quantidade ne preencha o vetor xscom nnúmeros lidos do teclado:
+Crie uma função preenchida que receba um vetor xs de inteiros, uma quantidade ne preencha o vetor xs com n números lidos do teclado:
 void preenche (int* xs, int n);
-Crie uma função mediaque receba um vetor xs, a quantidade de elementos nno vetor xse retorne a média entre todos os valores do vetor.
+Crie uma função media que receba um vetor xs, a quantidade de elementos n no vetor xs e retorne a média entre todos os valores do vetor.
 Dentro das funções, use uma notação de ponteiros em vez de índices ( *vs [])
 
-Crie um programa que leia um número e preencha o vetor veccom essa quantidade de elementos e em seguida calcule a média dos valores do vetor.
+Crie um programa que leia um número e preencha o vetor vec com essa quantidade de elementos e em seguida calcule a média dos valores do vetor.
+*/
+#include <stdio.h>
+int media(int* xs, int n){
+    int i=0;
+    int soma = 0;
+    for (i=0; i<n; i++){
+        soma+=xs[i];
+    }
+    int m=soma/n;
+    return m;
+}
+void preenche (int* xs, int n){
+    int i=0;
+    for (i=0; i<n; i++){
+        printf("quais os valores do vetor?");
+        scanf("%d", &xs[i]);
+    }
+}
+int main(void){
+    int vec[100];
+    int n;
+    int a;
+    printf("quantos valores no vetor?");
+    scanf("%d",&n);
+    preenche(vec,n);
+    a = media(vec,n);
+    printf("a media é: %d",a);
+}  
