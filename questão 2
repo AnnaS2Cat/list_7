@@ -12,7 +12,6 @@ Após remover I=2:
 
 
 #include <stdio.h>
-
 int main(void) {
     int vet[5];
     int i, I;
