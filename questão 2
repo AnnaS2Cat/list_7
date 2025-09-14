@@ -1,4 +1,4 @@
-Crie um vetor vetde 5 posições.
+/*Crie um vetor vetde 5 posições.
 Leia 5 números e guarde-os em vet.
 Exiba todos os números de vet.
 Leia um outro número I.
@@ -6,8 +6,34 @@ Remova o valor de vetnenhum índice I.
 Mantenha o vetor sem buracos!
 As posições vazias devem ser preenchidas com 0.
 Exemplo:
-
 | 90 | 55 | 15 | 70 | 10 |
 Após remover I=2:
+| 90 | 55 | 70 | 10 |  0 |*/
 
-| 90 | 55 | 70 | 10 |  0 |
+
+#include <stdio.h>
+
+int main(void) {
+    int vet[5];
+    int i, I;
+    for (i = 0; i < 5; i++) {
+        printf("Digite o valor da posição %d: ", i);
+        scanf("%d", &vet[i]);
+    }
+    printf("o vetor é:\n");
+    for (i = 0; i < 5; i++) {
+        printf("| %d", vet[i]);
+    }
+    
+    printf("\nDigite o índice que deseja remover (0 a 4): ");
+    scanf("%d", &I);
+    for (i = I; i < 4; i++) {
+        vet[i] = vet[i + 1]; //deslocando ao substituir um valor por outro
+    }
+    vet[4] = 0;// igual no char vet[4]='/0';, substitui o espaço que sobrou por 0
+    
+    printf("Vetor após remover %d:\n", I);
+    for (i = 0; i < 5; i++) {
+        printf("| %d ", vet[i]);
+    }
+}
