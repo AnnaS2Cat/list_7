@@ -33,7 +33,7 @@ int main(void){
     int a;
     printf("quantos valores no vetor?");
     scanf("%d",&n);
-    preenche(vec,n);
+    preenche(vec,n); //vec == &vec[0], isso pq o ponteiro como parametro de uma funçao é o msm que apontar um ponteiro para o primeiro elemento
     a = media(vec,n);
     printf("a media é: %d",a);
 }  
