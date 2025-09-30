@@ -35,4 +35,47 @@ int main(void) {
     for (i = 0; i < 5; i++) {
         printf("| %d ", vet[i]);
     }
+
+
+#include <stdio.h>
+#define c 5
+void ler(int* vet){
+    for(int i=0;i<c;i++){
+        printf("qual o valor de v[%d]:",i);
+        scanf("%d",&vet[i]);
+    }
+ }
+void remover(int I, int* vet){
+    for(int i=I;i<c;i++){
+        if(i==4){
+            vet[i]=0;
+        }
+        else {vet[i]=vet[i+1]; 
+        }
+    }
+}
+int main(void){
+    int vet[c];
+    int I;
+    ler(vet);
+    for(int i=0;i<c;i++){
+        printf("| %d ",vet[i]);
+    }
+    printf("|");
+    
+    printf("qual item deseja remover? de (0 a 4)\n ");
+    scanf("%d",&I);
+    remover(I, vet);
+    
+    for(int i=0;i<c;i++){
+        printf("| %d ",vet[i]);
+    }
+    printf("|");
+}
+ 
+ 
+ 
+ 
+
+
 }
