@@ -72,10 +72,40 @@ int main(void){
     }
     printf("|");
 }
- 
- 
- 
- 
+}
 
+/*Crie uma função media que recebe um array bidimensional arr, a quantidade de linhas l, a quantidade de colunas c, e retorna a média entre todos os valores do array:
+float media (int arr[L][C], int l, int c);
+L e C devem ser quaisquer valores constantes predefinidos.*/
 
+#include <stdio.h>
+#define C 100
+#define L 100
+float media (int arr[L][C], int l, int c){
+    int x;
+    float m;
+    int soma=0;
+    int cont=0;
+    for(int i=0;i<l;i++){
+       for(int j=0;j<c;j++){
+           printf("qual o valor de arr[%d][%d]",i,j);
+           scanf("%d",&x);
+           arr[i][j]=x;
+           soma+=arr[i][j]; 
+           cont+=1;
+        }
+    }
+    printf("soma %d\n",soma);
+    printf("cont %d\n",cont);
+    m=soma/cont;
+    return m;
+}
+int main(void){
+    int tapa[L][C];
+    int l,c;
+    printf("quantas linhas ?");
+    scanf("%d",&l);
+    printf("quantas colunas ?");
+    scanf("%d",&c);
+    printf("a media é: %f",media(tapa,l,c));
 }
